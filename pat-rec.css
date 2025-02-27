@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    background: #2C3E50;
+    color: white;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    overflow-y: auto;  /* Allows scrolling if needed */
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    border-radius: 5px;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+    background: #1ABC9C;
+    transform: scale(1.05);
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    background: #ECF0F1;
+    min-height: 100vh;
+}
+
+/* Search & Add Controls */
+.record-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 70%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background: #3498DB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980B9;
+}
+
+/* Patient Table */
+table {
+    width: 100%;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #1ABC9C;
+    color: white;
+}
+
+td button {
+    background: #E74C3C;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+td button:hover {
+    background: #C0392B;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    .main-content {
+        margin-left: 200px;
+    }
+    .record-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    input {
+        width: 100%;
+    }
+}

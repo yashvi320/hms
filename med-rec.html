@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Record Dashboard</title>
+    <link rel="stylesheet" href="med-rec.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Medical Dashboard</h2>
+        <ul>
+            <li class="active"><a href="med-rec.html">Dashboard</a></li>
+            <li><a href="pat-rec.html">Patient Records</a></li>
+            <li class="logout"><a href="../Home/home.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        
+        <!-- Dashboard Cards -->
+        <div class="dashboard-cards">
+            <div class="card total-patients">Total Patients: <span>120</span></div>
+            <div class="card admitted-patients">Admitted: <span>45</span></div>
+            <div class="card discharged-patients">Discharged: <span>65</span></div>
+            <div class="card critical-patients">Critical: <span>10</span></div>
+        </div>
+
+        <!-- Patient List -->
+        <div class="patient-section">
+            <h2>Patient Records</h2>
+            <input type="text" id="search" placeholder="Search Patients...">
+            <button onclick="openAddModal()">Add Patient</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Condition</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="patient-table">
+                    <!-- Dynamic Rows -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Patient Chart -->
+        <canvas id="patientChart"></canvas>
+    </div>
+
+    <!-- Patient Add/Edit Modal -->
+    <div id="patient-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Add/Edit Patient</h2>
+            <input type="text" id="patient-name" placeholder="Patient Name">
+            <input type="number" id="patient-age" placeholder="Age">
+            <input type="text" id="patient-condition" placeholder="Condition">
+            <select id="patient-status">
+                <option value="Admitted">Admitted</option>
+                <option value="Discharged">Discharged</option>
+                <option value="Critical">Critical</option>
+            </select>
+            <button onclick="savePatient()">Save</button>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="med-rec.js"></script>
+
+</body>
+</html>

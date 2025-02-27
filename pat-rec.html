@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Records</title>
+    <link rel="stylesheet" href="pat-rec.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Medical Dashboard</h2>
+        <ul>
+            <li><a href="med-rec.html">Dashboard</a></li>
+            <li class="active"><a href="pat-rec.html">Patient Records</a></li>
+            <li class="logout"><a href="home.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>Patient Records</h2>
+
+        <!-- Search and Add Patient -->
+        <div class="record-controls">
+            <input type="text" id="search" placeholder="Search Patients..." onkeyup="searchPatient()">
+            <button onclick="openAddModal()">Add Patient</button>
+        </div>
+
+        <!-- Patient List Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Condition</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="patient-table">
+                <!-- Dynamic Rows -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Patient Add/Edit Modal -->
+    <div id="patient-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Add/Edit Patient</h2>
+            <input type="text" id="patient-name" placeholder="Patient Name">
+            <input type="number" id="patient-age" placeholder="Age">
+            <input type="text" id="patient-condition" placeholder="Condition">
+            <select id="patient-status">
+                <option value="Admitted">Admitted</option>
+                <option value="Discharged">Discharged</option>
+                <option value="Critical">Critical</option>
+            </select>
+            <button onclick="savePatient()">Save</button>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="pat-rec.js"></script>
+
+</body>
+</html>

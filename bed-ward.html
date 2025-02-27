@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bed & Ward Management Dashboard</title>
+    <link rel="stylesheet" href="bed-ward.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <h2>Bed and Ward Dashboard</h2>
+        <ul>
+            <li class="active"><a href="bed-ward.html">Dashboard</a></li>
+            <li><a href="bed-status.html">Bed Status</a></li>
+            <li><a href="ward-management.html">Ward Management</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li class="logout"><a href="../Home/home.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h1>Bed & Ward Management</h1>
+        </header>
+
+        <section class="dashboard-cards">
+            <div class="card bed-card">
+                <h2>Total Beds</h2>
+                <p id="total-beds">500</p>
+            </div>
+            <div class="card available-card">
+                <h2>Available Beds</h2>
+                <p id="available-beds">200</p>
+            </div>
+            <div class="card occupied-card">
+                <h2>Occupied Beds</h2>
+                <p id="occupied-beds">250</p>
+            </div>
+            <div class="card reserved-card">
+                <h2>Reserved Beds</h2>
+                <p id="reserved-beds">50</p>
+            </div>
+        </section>
+
+        <!-- Bed Occupancy Chart -->
+        <canvas id="bedChart"></canvas>
+
+        <!-- Bed Allocation Section -->
+        <section class="bed-allocation">
+            <h2>Bed Allocation</h2>
+            <div class="bed-grid" id="bed-grid"></div>
+        </section>
+    </div>
+
+    <script src="bed-ward.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ward Management</title>
+    <link rel="stylesheet" href="ward-management.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Bed and Ward Dashboard</h2>
+        <ul>
+            <li><a href="bed-ward.html">Dashboard</a></li>
+            <li><a href="bed-status.html">Bed Status</a></li>
+            <li class="active"><a href="ward-management.html">Ward Management</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li class="logout"><a href="../Home/home.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Ward Management</h1>
+
+        <!-- Search & Filter -->
+        <div class="search-filter">
+            <input type="text" id="search-ward" placeholder="Search Ward..." onkeyup="searchWard()">
+            <select id="filter-type" onchange="filterWard()">
+                <option value="all">All Types</option>
+                <option value="General">General</option>
+                <option value="ICU">ICU</option>
+                <option value="Emergency">Emergency</option>
+            </select>
+        </div>
+
+        <!-- Ward List -->
+        <div class="ward-list" id="ward-list">
+            <!-- Wards will be dynamically added here -->
+        </div>
+
+        <!-- Bed Allocation for Selected Ward -->
+        <div id="bed-allocation-section" class="hidden">
+            <h2>Bed Allocation for <span id="selected-ward-name"></span></h2>
+            <div class="bed-grid" id="bed-grid"></div>
+        </div>
+    </div>
+
+    <script src="ward-management.js"></script>
+</body>
+</html>
