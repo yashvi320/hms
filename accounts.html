@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts Dashboard</title>
+    <link rel="stylesheet" href="accounts.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="tabs">  
+            <h2>Accounts Dashboard</h2>
+            <ul>
+                <li class="tab" id="generate-bill-tab">Generate Bill</li>
+                <li class="tab" id="send-total-tab">Send Total</li>
+                <li class="tab" id="logout">Logout</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="content-section" id="generate-bill-content">
+                <h2>Generate Bill</h2>
+                <form>
+                    <label for="patient-id">Patient ID:</label>
+                    <input type="number" id="patient-id" name="patient-id" required>
+                    
+                    <label for="pharmacy-bill">Pharmacy Bill:</label>
+                    <input type="number" step="0.01" id="pharmacy-bill" name="pharmacy-bill" required>
+                    
+                    <label for="ward-bill">Ward Bill:</label>
+                    <input type="number" step="0.01" id="ward-bill" name="ward-bill" required>
+                    
+                    <label for="doctor-bill">Doctor Bill:</label>
+                    <input type="number" step="0.01" id="doctor-bill" name="doctor-bill" required>
+                    
+                    <label for="lab-bill">Lab Bill:</label>
+                    <input type="number" step="0.01" id="lab-bill" name="lab-bill" required>
+                    
+                    <label for="total-bill">Total Bill:</label>
+                    <input type="number" step="0.01" id="total-bill" name="total-bill" readonly>
+                    
+                    <label for="amount-paid">Amount Paid:</label>
+                    <input type="number" step="0.01" id="amount-paid" name="amount-paid" required>
+                    
+                    <label>Payment Status:</label>
+                    <input type="checkbox" id="payment-status" name="payment-status"> Paid
+                    
+                    <button type="button" onclick="generateBill()">Generate</button>
+                </form>
+            </div>
+
+            <div class="content-section" id="send-total-content">
+                <h2>Send Total</h2>
+                <button type="button" onclick="sendTotal()">Send Total Bill</button>
+            </div>
+        </div>
+    </div>
+    <script src="accounts.js"></script>
+</body>
+</html>

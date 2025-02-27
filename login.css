@@ -1,0 +1,250 @@
+/* Import Google Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background Styling */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #2C3E50, #34495E);
+    position: relative;
+}
+
+/* Adding Animated Background Effect */
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../images/Picsart_25-02-25_22-27-05-663.jpg') no-repeat center center/cover;
+    opacity: 0.40;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #2C3E50; 
+        color: white;
+        padding: 15px 50px;
+        position: fixed; /* Keeps it at the top */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* Ensures it stays on top */
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 12px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Navbar Hover Effect with Underline Animation */
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 1px;
+    width: 0;
+    height: 2px;
+    background: #00ffea;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #00ffea;
+}
+
+.navbar ul li a:hover::after {
+    width: 80%;
+    left: 10%;
+    transform: scaleY(1.5);
+}
+
+/* Glassmorphism Container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Form Box with Animated Effects */
+.form-box {
+    background: linear-gradient(135deg, #2C3E50, #34495E);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    width: 350px;
+    text-align: center;
+    color: white;
+    transform: scale(0.9);
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Title */
+#form-title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #00ffcc;
+    letter-spacing: 1px;
+}
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+
+/* Input Labels */
+.input-group label {
+    font-size: 14px;
+    color: #ddd;
+    font-weight: 600;
+}
+
+/* Input Fields */
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+/* Input Field Glow Effect on Focus */
+.input-group input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 3px #dbe0de96;
+}
+
+/* Floating Input Labels */
+.input-group input:focus + label {
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    font-size: 12px;
+    color: #1ABC9C;
+    transition: 0.3s ease-in-out;
+}
+
+/* Button Styling */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #1ABC9C;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button Hover Animation */
+.submit-btn:hover {
+    background: white;
+    color: #1ABC9C;
+    border: 2px solid #1ABC9C;
+}
+
+/* Button Ripple Effect */
+.submit-btn::before {
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    top: 50%;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: 0.6s ease-in-out;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+}
+
+.submit-btn:active::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+}
+
+/* Adding Link to Register */
+.register-link {
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+.register-link a {
+    color: #1ABC9C;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    background: #2C3E50; /* Deep Navy */
+    color: white;
+    padding: 15px;
+    position: fixed; /* Sticks to the bottom */
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Management Dashboard</title>
+    <link rel="stylesheet" href="pharmacy.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <div class="tabs">
+            <h2>Pharmacy Dashboard</h2>
+            <ul>
+                <li class="tab" id="add-med-tab">Add Medicine</li>
+                <li class="tab" id="view-stock-tab">View Stock</li>
+                <li class="tab" id="issue-med-tab">Issue Medicine</li>
+                <li class="tab" id="generate-invoice-tab">Generate Invoice</li>
+                <li class="tab" id="search-med-tab">Search Medicine</li>
+                <li class="tab" id="logout">Logout</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="content-section" id="add-med-content">
+                <h2>Add Medicine</h2>
+                <form id="add-med-form">
+                    <label for="med-id">Medicine ID:</label>
+                    <input type="number" id="med-id" name="med-id" required>
+
+                    <label for="med-name">Medicine Name:</label>
+                    <input type="text" id="med-name" name="med-name" required>
+
+                    <label for="brand">Brand:</label>
+                    <input type="text" id="brand" name="brand" required>
+
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+
+                    <label for="quantity">Quantity In Stock:</label>
+                    <input type="number" id="quantity" name="quantity" required>
+
+                    <label for="price">Price:</label>
+                    <input type="number" step="0.01" id="price" name="price" required>
+
+                    <label for="exp-date">Expiry Date:</label>
+                    <input type="date" id="exp-date" name="exp-date" required>
+
+                    <label for="manufacturer">Manufacturer:</label>
+                    <input type="text" id="manufacturer" name="manufacturer" required>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <div class="content-section" id="view-stock-content">
+                <h2>View Stock</h2>
+            </div>
+
+            <div class="content-section" id="issue-med-content">
+                <h2>Issue Medicine</h2>
+                <form id="issue-med-form">
+                    <label for="issue-med-id">Medicine ID:</label>
+                    <input type="number" id="issue-med-id" name="issue-med-id" required>
+
+                    <label for="issue-quantity">Quantity:</label>
+                    <input type="number" id="issue-quantity" name="issue-quantity" required>
+
+                    <button type="submit">Issue Medicine</button>
+                </form>
+            </div>
+
+            <div class="content-section" id="generate-invoice-content">
+                <h2>Generate Invoice</h2>
+                <button id="generate-invoice-btn">Generate Invoice</button>
+            </div>
+
+            <div class="content-section" id="search-med-content">
+                <h2>Search Medicine</h2>
+                <input type="text" id="search-med-input" placeholder="Enter medicine name">
+                <button id="search-med-btn">Search</button>
+                <div id="search-results"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="pharmacy.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="doctor.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="tabs">  
+            <h2>Doctor Dashboard</h2>
+            <ul>
+                <li class="tab" id="reg-doc-tab">Register Doctor</li>
+                <li class="tab" id="assign-patient-tab">Assign Patient</li>
+                <li class="tab" id="view-history-tab">View Patient History</li>
+                <li class="tab" id="generate-bill-tab">Generate Bill</li>
+                <li class="tab" id="generate-prescription-tab">Generate Prescription</li>
+                <li class="tab" id="logout">Logout</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="content-section" id="reg-doc-content">
+                <h2>Register Doctor</h2>
+                <form>
+                    <label for="doc-fname">First Name:</label>
+                    <input type="text" id="doc-fname" required>
+
+                    <label for="doc-lname">Last Name:</label>
+                    <input type="text" id="doc-lname" required>
+
+                    <label for="speciality">Speciality:</label>
+                    <input type="text" id="speciality" required>
+
+                    <label for="phone_no">Phone Number:</label>
+                    <input type="text" id="phone_no" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+
+                    <label for="lic_no">License Number:</label>
+                    <input type="text" id="lic_no" required>
+
+                    <label for="experience">Experience (Years):</label>
+                    <input type="number" id="experience" required>
+
+                    <label for="patients_assigned">Patients Assigned:</label>
+                    <input type="number" id="patients_assigned" required>
+
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female" required>
+                    <label for="female">Female</label>
+
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+
+            <div class="content-section" id="assign-patient-content">
+                <h2>Assign Patient</h2>
+                <form>
+                    <label for="doc-id">Doctor ID:</label>
+                    <input type="text" id="doc-id" required>
+                    
+                    <label for="patient-id">Patient ID:</label>
+                    <input type="text" id="patient-id" required>
+
+                    <button type="submit">Assign</button>
+                </form>
+            </div>
+
+            <div class="content-section" id="view-history-content">
+                <h2>View Patient History</h2>
+            </div>
+
+            <div class="content-section" id="generate-bill-content">
+                <h2>Generate Bill</h2>
+            </div>
+
+            <div class="content-section" id="generate-prescription-content">
+                <h2>Generate Prescription</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="doctor.js"></script>    
+</body>
+</html>

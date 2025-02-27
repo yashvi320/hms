@@ -1,0 +1,234 @@
+/* Importing Google Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ECF0F1; /* Light Grey */
+    color: #333; /* Dark Grey for readability */
+}
+
+/* ================= HEADER ================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #2C3E50, #34495E);
+    color: white;
+    padding: 15px 50px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 12px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Navbar Hover Effect with Underline Animation */
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 1px;
+    width: 0;
+    height: 2px;
+    background: #00ffea;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #00ffea;
+}
+
+.navbar ul li a:hover::after {
+    width: 80%;
+    left: 10%;
+    transform: scaleY(1.5);
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+    height: 85vh;
+    background: url('../images/Picsart_25-02-25_22-27-05-663.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Glassmorphism Hero Overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 50%;
+    background: linear-gradient(135deg, #2C3E50, #34495E);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.hero .btn {
+    background: #16A085;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero .btn:hover {
+    background: white;
+    color: #16A085;
+    border: 2px solid #16A085;
+}
+
+/* ================= SERVICES SECTION ================= */
+.services {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #ecf0f1, #dfe6e9);
+}
+
+.services h2 {
+    font-size: 32px;
+    color: #2C3E50;
+    margin-bottom: 30px;
+}
+
+/* Service Cards */
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+    color: #16A085;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* ================= STATS SECTION ================= */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background: linear-gradient(135deg, #2C3E50, #34495E);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.stat-box {
+    width: 220px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.stat-box:hover {
+    transform: scale(1.05);
+}
+
+.stat-box h2 {
+    font-size: 38px;
+    font-weight: bold;
+    color: #1ABC9C;
+}
+
+.stat-box p {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    background: #1A252F;
+    color: white;
+    padding: 15px;
+    position: relative;
+    width: 100%;
+}
+
+/* Smooth Scroll Effect */
+html {
+    scroll-behavior: smooth;
+}
