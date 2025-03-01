@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="patient.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="tabs">  
+            <h2>Patient Dashboard</h2>
+            <ul>
+                <li class="tab" id="registration-tab">Registration</li>
+                <li class="tab" id="medical-history-tab">Medical History</li>
+                <li class="tab" id="get-bill-tab">Get Bill</li>
+                <li class="tab" id="get-report-tab">Get Report</li>
+                <li class="tab" id="payment-tab">Payment</li>
+                <li class="tab" id="logout">Logout</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="content-section" id="registration-content">
+                <h2>Patient Registration</h2>
+                <form action="#" method="POST">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" required>
+
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" required>
+
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required>
+
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="contact">Contact:</label>
+                    <input type="tel" id="contact" name="contact" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" required></textarea>
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <label for="emergency-contact">Emergency Contact Name:</label>
+                    <input type="text" id="emergency-contact" name="emergency-contact" required>
+
+                    <label for="emergency-phone">Emergency Contact Number:</label>
+                    <input type="tel" id="emergency-phone" name="emergency-phone" required>
+
+                    <label for="primary-doc">Primary Doctor ID:</label>
+                    <input type="number" id="primary-doc" name="primary-doc" required>
+
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+
+            <div class="content-section" id="medical-history-content">
+                <h2>Medical History</h2>
+            </div>
+
+            <div class="content-section" id="get-bill-content">
+                <h2>Get Bill</h2>
+            </div>
+
+            <div class="content-section" id="get-report-content">
+                <h2>Get Report</h2>
+            </div>
+
+            <div class="content-section" id="payment-content">
+                <h2>Payment</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="patient.js"></script>
+</body>
+</html>
