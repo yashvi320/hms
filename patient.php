@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "123_root";
 $dbname = "hospital";
 
 // Create connection
